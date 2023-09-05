@@ -231,3 +231,9 @@
   color:#000;
   
 } */
+.swiper{
+  display: none !important;
+}
+.swiper-slide{
+  width: 120px !important;
+}

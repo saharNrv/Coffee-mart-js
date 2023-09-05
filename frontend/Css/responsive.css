@@ -70,7 +70,12 @@
 }
 
 @media screen and (max-width: 375px) {
- 
+ .coffee-menu{
+  display: none;
+ }
+ .swiper{
+  display: block !important;
+ }
 }
 @media screen and (max-width: 345px) {
   .menu-mobail {
