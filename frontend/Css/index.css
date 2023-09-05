@@ -159,23 +159,75 @@
 .header-infos{
     max-width:  500px;
     padding: 20px;
-     /* margin-top:120px ; */
-    position: fixed;
     left: 127px; 
-    margin-top: 120px;
-    /* margin-left: 20px; */
-    /* background-color: rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(6px); */
+    margin-top: 110px;
+    position: absolute;
 
 }
 
 .header-infos__title{
-    font-size: 35px;
+    font-size: 45px;
     font-family: 'vazir-bold';
     color: var(--primary-color);
 }
 .header-infos__text{
     margin: 20px 0px;
     color: #8d8d8d;
-    line-height: 1.2;
+    line-height: 1.4;
 }
+.btn-wraper{
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+/* main style */
+
+/* head style */
+
+.heading{
+  text-align: center;
+  padding-top:50px ;
+  padding-bottom: 50px;
+}
+
+.head-title{
+  font-family: 'vazir-bold';
+  font-size: 30px;
+  color: var(--primary-color);
+}
+.head-text{
+  color: #777777;
+  margin-top: 20px;
+
+}
+/* coffee style */
+.coffee-wraper{
+  margin-bottom: 100px;
+}
+.coffee-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coffee-menu{
+  display: flex;
+}
+.coffee-item{
+  /* width: 80px; */
+}
+.coffee-link{
+  width: 80px;
+  display: block;
+}
+.coffee-item:last-child{
+  margin-left: 0px;
+}
+
+/* .coffee-item-active a{
+  text-decoration: underline;
+  color:#000;
+  
+} */

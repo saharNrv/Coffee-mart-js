@@ -14,3 +14,25 @@ a{
     text-decoration: none;
     color: #555;
 }
+
+.btn{
+    display: block;
+    width: 120px;
+    text-align: center;
+    padding: 10px;
+    background: var(--primary-color);
+    color: #fff;
+
+}
+.btn-2{
+    display: block;
+    width: 120px;
+    text-align: center;
+    border: 2px solid #c0c9c5;
+    padding: 10px;
+    margin-right: 20px;
+    transition: all 2ms ease;
+}
+.btn-2:hover{
+    background-color: #c0c9c5;
+}
