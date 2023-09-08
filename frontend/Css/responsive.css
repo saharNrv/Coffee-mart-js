@@ -31,6 +31,17 @@
   .header {
     padding: 0px;
   }
+  .coffee-detail{
+    opacity: 1;
+    border-radius: 20px;
+    width: auto;
+  }
+  .coffee-icon-search{
+    display: none;
+  }
+  .op{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -42,6 +53,14 @@
     /* background-color: rgba(0, 0, 0, 0.15); */
     backdrop-filter: blur(6px);
     border-radius: 10px;
+  }
+  .coffee-img{
+    width: 60%;
+  }
+  .coffee-link-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 576px) {
