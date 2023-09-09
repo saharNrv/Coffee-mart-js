@@ -36,12 +36,7 @@
     border-radius: 20px;
     width: auto;
   }
-  .coffee-icon-search{
-    display: none;
-  }
-  .op{
-    display: none;
-  }
+ 
 }
 
 @media screen and (max-width: 768px) {

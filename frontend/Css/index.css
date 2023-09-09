@@ -223,65 +223,60 @@
 }
 /* coffee box style */
 
-.coffee-box {
-  /* background-color: red; */
-  height: 400px;
-  position: relative;
+.coffee-box{
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
-.coffee-link-box {
-  position: absolute;
+.coffee-img-wrap{
+  position: relative;
+}
+.coffee-link-img{
   display: block;
-  transition: all 0.5s ease;
-}
-.coffee-img {
-  width: 100%;
-}
-.op {
-  opacity: 0;
-}
-.coffee-box:hover .op {
-  opacity: 1;
-  transform: scaleZ(1.2);
-}
-.coffee-detail {
-  background-color: #fff;
-  position: absolute;
-  display: flex;
-  width: 60%;
-  justify-content: center;
-  padding: 0px 20px;
-  bottom: 38px;
-  font-size: 20px;
-  align-items: center;
-  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.17);
-  opacity: 0;
-  transition: all 0.5s ease;
-}
-.coffee-box:hover .coffee-detail{
-  opacity: 1;
-  transform: translateY(-15px);
-}
-.coffee-detail-icon {
-  display: block;
-  padding: 10px;
 }
 
-.coffee-box-name{
-  position: absolute;
+.coffee-img{
   width: 100%;
-  text-align: center;
+}
+.coffee-img-wrap-hover {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   bottom: 0px;
+  right: 0px;
+  opacity: 0;
+  transition: all 0.5s ease;
 }
-.coffee-box-title-link{
-  font-family:'vazir-bold';
-  color: #777;
+.coffee-box:hover .coffee-img-wrap-hover{
+  opacity: 1;
 }
-.coffee-price{
+.coffee-btn-wrap {
+  width: 200px;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 80px;
+  opacity: 0;
+  transition: all 0.5s ease;
+  
+}
+.coffee-box:hover .coffee-btn-wrap{
+    opacity: 1;
+    transform: translateY(-10px);
+}
+.coffee-icon-link{
   display: block;
-  margin-top: 10px;
+  font-size: 20px;
+}
+.coffee-info{
+  text-align: center;
+}
+.coffee-info-title{
+  font-family: 'vazir-bold';
+  margin-bottom: 10px;
 }
