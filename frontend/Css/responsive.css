@@ -12,6 +12,28 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .coffee-img-wrap-hover{
+    display: none;
+  }
+  .coffee-btn-wrap{
+    opacity: 1;
+    position: relative;
+    bottom: 29px;
+   
+}
+
+.coffee-box:hover .coffee-btn-wrap{
+     transform: none;
+}
+
+.coffee-icon-link-search{
+  display: none;
+}
+.coffee-btn-wrap{
+  width: 100px;
+  border-radius: 20px;
+}
+
 }
 @media screen and (max-width: 1024px) {
 }
@@ -104,6 +126,12 @@
   .btn-2{
     margin-right: 0;
     margin-top: 15px;
+  }
+  .coffee-btn-wrap{
+    bottom: 12px;
+  }
+  .coffee-icon-link{
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 320px) {

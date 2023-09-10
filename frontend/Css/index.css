@@ -222,6 +222,9 @@
   width: 120px !important;
 }
 /* coffee box style */
+.coffee-content{
+  margin-top: 50px;
+}
 
 .coffee-box{
   width: 100%;
@@ -234,7 +237,9 @@
   position: relative;
 }
 .coffee-link-img{
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .coffee-img{
