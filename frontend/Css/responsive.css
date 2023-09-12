@@ -58,7 +58,18 @@
     border-radius: 20px;
     width: auto;
   }
- 
+  .about-coffee-info-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-coffee-title{
+    text-align: center;
+  }
+ .about-coffee-colum{
+  flex-direction: column-reverse;
+ }
 }
 
 @media screen and (max-width: 768px) {
@@ -89,6 +100,9 @@
   }
   .nav-mobail-logo {
     text-align: left;
+  }
+  .about-coffee-title{
+    font-size: 35px;
   }
 }
 @media screen and (max-width: 468px) {
