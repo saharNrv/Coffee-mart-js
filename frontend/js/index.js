@@ -22,20 +22,3 @@ bg.addEventListener('click',()=>{
 })
 ///////////////////////
 
-// coffeeBox.addEventListener('mouseover',()=>{
-//     console.log('hover');
-//     coffeeImg.classList.add('tr')
-
-//     coffeeImg.setAttribute('src','./image/product-8-2-back.jpeg')
-// })
-
-// coffeeBox.addEventListener('mouseout',()=>{
-//     console.log('hover');
-//     coffeeImg.setAttribute('src','./image/product-8.jpg')
-//     coffeeImg.classList.add('tr')
-// })
-// coffeeLinkBox.addEventListener('click',()=>{
-//     coffeeLinkBox.setAttribute('href','https://www.w3schools.com/')
-//     coffeeImg.classList.add('tr')
-
-// })

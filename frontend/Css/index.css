@@ -214,12 +214,7 @@
   margin-left: 0px;
 }
 
-.swiper {
-  display: none !important;
-}
-.swiper-slide {
-  width: 120px !important;
-}
+
 /* coffee box style */
 .coffee-content {
   margin-top: 50px;
@@ -404,4 +399,38 @@
   height: 450px;
   width: 100%;
   object-fit: cover;
+}
+.blog{
+  height: 50vh;
+  margin-top: 50px;
+}
+.blog-wrapper{
+  width: 350px;
+  height:370px;
+}
+.blog-img-wrap{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.blog-link{
+  display: block;
+  position: absolute;
+}
+.blog-img{
+  width: 100%;
+}
+
+.blog-showe{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.blog-wrapper:hover .blog-showe {
+  opacity: 1;
+  
 }
