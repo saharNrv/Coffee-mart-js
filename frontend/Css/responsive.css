@@ -99,6 +99,18 @@
   .share-text{
     text-align: center;
   }
+  .footer{
+    margin-top: 0px;
+  }
+  .footer-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .footer-list {
+    margin-top: 30px;
+  }
 }
 @media screen and (max-width: 576px) {
   .nav-mobail-icon {
@@ -154,6 +166,12 @@
   .coffee-icon-link{
     font-size: 16px;
   }
+  .share-text {
+    font-size: 20px;
+}
+.footer-text {
+  line-height: 1.4;
+}
 }
 @media screen and (max-width: 320px) {
   .elementor-find-title {
