@@ -33,6 +33,9 @@
   width: 100px;
   border-radius: 20px;
 }
+.share-text{
+  max-width: 90%;
+}
 
 }
 @media screen and (max-width: 1024px) {
@@ -70,6 +73,9 @@
  .about-coffee-colum{
   flex-direction: column-reverse;
  }
+ .share-text{
+  font-size: 25px;
+ }
 }
 
 @media screen and (max-width: 768px) {
@@ -90,6 +96,9 @@
     align-items: center;
     justify-content: center;
   }
+  .share-text{
+    text-align: center;
+  }
 }
 @media screen and (max-width: 576px) {
   .nav-mobail-icon {
@@ -104,6 +113,7 @@
   .about-coffee-title{
     font-size: 35px;
   }
+  
 }
 @media screen and (max-width: 468px) {
   .header-infos__title {
@@ -123,7 +133,6 @@
  .coffee-menu{
   display: none;
  }
-
 }
 @media screen and (max-width: 345px) {
   .menu-mobail {

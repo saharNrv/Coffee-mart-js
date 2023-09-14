@@ -453,3 +453,26 @@
 .swiper-wrapper{
   height: 500px !important;
 }
+/* share style */
+
+.share{
+  margin-top: 50px;
+}
+
+.share-img{
+  width: 100%;
+}
+.share-info{
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.share-text{
+  font-size: 30px;
+  color: var(--primary-color);
+  font-family: 'vazir-bold';
+  max-width: 60%;
+  line-height: 1.6;
+}
