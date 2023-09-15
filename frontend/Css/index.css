@@ -567,8 +567,12 @@
   height: 100%;
   position: fixed;
   top: 0px;
+  left: -300px;
   background-color: #fff;
   z-index: 44;
+  transition: all 0.5s ease;
+}
+.basket-left{
   left: 0px;
 }
 .basket-head{
@@ -589,4 +593,32 @@ align-items: center;
 .basket-icon{
   font-size: 30px;
   cursor: pointer;
+}
+.basket-item{
+  border-bottom: 1px solid #ccc;
+}
+.basket-link{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.basket-pro{
+  width: 70px;
+  height: 70px;
+}
+.basket-img{
+  width: 100%;
+}
+
+.basket-info{
+  text-align: center;
+}
+.basket-info-title{
+  margin-bottom: 10px;
+  font-family: 'vazir-bold';
+}
+.basket-count{
+  color: #8d8d8d;
+  font-size: 12px;
 }
