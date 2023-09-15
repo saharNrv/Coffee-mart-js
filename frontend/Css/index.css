@@ -622,3 +622,49 @@ align-items: center;
   color: #8d8d8d;
   font-size: 12px;
 }
+
+/* detaile box */
+.detaile-box{
+  width: 800px;
+  background-color: #fff;
+  position: fixed;
+  top: 50px;
+  left: 0px;
+  right: 0px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+
+}
+.detaile-right{
+  width: 50%;
+
+}
+.detaile-cover{
+width: 100%;
+}
+.detaile-img{
+  width: 100%;
+}
+.detaile-left{
+  width: 50%;
+  padding: 20px;
+}
+.detail-close{
+  position: absolute;
+top: 10px;
+left: 10px;
+}
+.detaile-title{
+  font-size: 20px;
+  font-family: 'vazir-bold';
+  margin-top: 25px;
+}
+.detaile-price{
+margin-top: 40px;
+margin-bottom: 12px;
+}
+.detail-info{
+color: #8d8d8d;
+line-height: 1.4;
+}
