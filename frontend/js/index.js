@@ -7,6 +7,7 @@ const basket=document.querySelector('.basket')
 const basketClose=document.querySelector('.basket-close')
 const coffeeSearch=document.querySelectorAll('.coffee-icon-link-search')
 const detaileBox=document.querySelector('.detaile-box')
+const detailClose=document.querySelector('.detail-close')
 
 const coffeeBox=document.querySelector('.coffee-box')
 const coffeeImg=document.querySelector('.coffee-img')
@@ -56,4 +57,8 @@ coffeeSearch.forEach(eve=>{
         detaileBox.classList.toggle('detaile-box-active')
         bg.classList.toggle('active')
     })
+})
+detailClose.addEventListener('click',()=>{
+    detaileBox.classList.toggle('detaile-box-active')
+    bg.classList.toggle('active')
 })
