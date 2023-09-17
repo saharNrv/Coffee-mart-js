@@ -5,6 +5,8 @@ const navShopp=document.querySelector('#nav-shopp')
 const navShoppTwo=document.querySelector('#nav-shopp-2')
 const basket=document.querySelector('.basket')
 const basketClose=document.querySelector('.basket-close')
+const coffeeSearch=document.querySelectorAll('.coffee-icon-link-search')
+const detaileBox=document.querySelector('.detaile-box')
 
 const coffeeBox=document.querySelector('.coffee-box')
 const coffeeImg=document.querySelector('.coffee-img')
@@ -40,6 +42,18 @@ bg.addEventListener('click',()=>{
     menuMobail.classList.remove('active-menu')
     basket.classList.remove('basket-left')
     bg.classList.remove('active')
+    detaileBox.classList.toggle('detaile-box-active')
+
 })
 ///////////////////////
-
+// coffeeSearch.addEventListener('click',(event)=>{
+//     event.preventDefault()
+//     console.log('click');
+//     detaileBox.computedStyleMap.display='flex'
+// })
+coffeeSearch.forEach(eve=>{
+    eve.addEventListener('click',()=>{
+        detaileBox.classList.toggle('detaile-box-active')
+        bg.classList.toggle('active')
+    })
+})
