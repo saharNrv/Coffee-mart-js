@@ -618,7 +618,45 @@
   color: #8d8d8d;
   font-size: 12px;
 }
-
+.basket-detaile {
+  position: absolute;
+  bottom: 0px;
+  padding: 20px;
+  width: 100%;
+  border-top: 1px solid #ccc;
+}
+.basket-detaile-title {
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-family: "vazir-bold";
+}
+.basket-detaile-price {
+  text-align: left;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 20px;
+}
+.basket-btn {
+  width: 100%;
+  display: block;
+  margin-top: 15px;
+  background: #efefef;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.5s ease;
+}
+.basket-btn:hover{
+  background-color: #e3e1e1;
+}
+.basket-btn-bg {
+  width: 100%;
+  display: block;
+  margin-top: 15px;
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
 /* detaile box */
 .detaile-box {
   width: 800px;
@@ -633,7 +671,7 @@
   z-index: 45;
   transition: all 0.5s ease;
 }
-.detaile-box-active{
+.detaile-box-active {
   top: 100px;
 }
 .detaile-right {
@@ -670,26 +708,23 @@
   color: #8d8d8d;
   line-height: 1.4;
 }
-.detaile-form-wrap{
+.detaile-form-wrap {
   margin-top: 60px;
   border-bottom: 2px solid #ccc;
   padding-bottom: 20px;
-
- 
 }
-.detatle-form{
+.detatle-form {
   display: flex;
   align-items: center;
 }
-.input-erap-detaile{
+.input-erap-detaile {
 }
 .input-number::-webkit-outer-spin-button,
 .input-number::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-   
+  -webkit-appearance: none;
+  margin: 0;
 }
-.input-number{
+.input-number {
   width: 30px;
   height: 30px;
   text-align: center;
@@ -698,7 +733,7 @@
   border-radius: 4px;
   background: transparent;
 }
-.input-btn{
+.input-btn {
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -708,13 +743,12 @@
   background: transparent;
   transition: all 0.5s ease;
 }
-.input-btn:hover{
+.input-btn:hover {
   background: var(--primary-color);
   color: #fff;
 }
-.detail-form-btn{
-
-  padding:5px 20px;
+.detail-form-btn {
+  padding: 5px 20px;
   margin-right: 15px;
   background-color: var(--primary-color);
   color: #fff;
@@ -723,19 +757,18 @@
   font-size: 18px;
   cursor: pointer;
 }
-.detail-share{
+.detail-share {
   margin-top: 30px;
-  
 }
-.detail-share-text{
+.detail-share-text {
   color: #8d8d8d;
 }
-.detail-share-icon{
+.detail-share-icon {
   color: #8d8d8d;
   margin-right: 5px;
   cursor: pointer;
   transition: all 0.5s ease;
 }
-.detail-share-icon:hover{
+.detail-share-icon:hover {
   color: #555;
 }
