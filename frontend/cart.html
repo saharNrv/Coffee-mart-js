@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/grid.css">
+    <link rel="stylesheet" href="./Css/cart.css">
+    <link rel="stylesheet" href="./Css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>coffee Cart</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header-cart">
+        <nav class="nav">
+            <div class="nav__logo">
+                <img src="./image/wood-logo-dark.svg" alt="coffee logo" class="logo">
+            </div>
+            <div class="nav__list-wrap">
+                <div class="nav__menu-wrap">
+
+                    <ul class="nav__menu">
+                        <li class="nav__item"><a href="" class="nav__link">خانه</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">بلاگ</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">فروشگاه</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">مقایسه</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">نمونه کارها</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">حساب کاربری</a></li>
+                    </ul>
+                </div>
+                <div class="nav__icon-wrap">
+                    <div class="nav_icon nav-left " id="nav-shopp">
+                        <span class="nav-num">0</span>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <div class="nav_icon">
+                        <span class="nav-num">0</span>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- 
+               <div class="menu-bar">
+                <span class="menu-line"></span>
+               </div> -->
+        </nav>
+
+        <nav class="nav-mobail">
+
+            <div class="nav-mobail-hamburg">
+
+                <div class="menu-bar">
+                    <span class="menu-line"></span>
+                </div>
+            </div>
+            <div class="nav-mobail-logo">
+                <img src="./image/wood-logo-dark.svg" alt="coffee logo" class="logo">
+            </div>
+            <div class="nav-mobail-icon">
+                <div class="nav_icon" id="nav-shopp-2">
+                    <span class="nav-num">0</span>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="header-cart-list">
+            <ul class="header-cart-menu">
+                <li class="header-cart-item color-white">
+                    سبد خرید
+                </li>
+                <li class="header-cart-item inactive">
+                    
+                    <i class="fa-solid fa-arrow-left"></i>
+                    تسویه حساب
+
+                </li>
+                <li class="header-cart-item inactive">
+                    
+                    <i class="fa-solid fa-arrow-left"></i>
+                    تکمیل سفارش
+
+                </li>
+
+            </ul>
+        </div>
+    </header>
+    <!-- product cart -->
+    <div class="product-cart">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <div class="product-table-wrap">
+                        <table class="table-cart">
+                            <thead>
+                                <tr class="">
+                                    <th class="table-cart-th"></th>
+                                    <th class="table-cart-th"></th>
+                                    <th class="table-cart-th">محصول</th>
+                                    <th class="table-cart-th">قیمت</th>
+                                    <th class="table-cart-th">تعداد</th>
+                                    <th class="table-cart-th">جمع جزء</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="table-cart-td">X</td>
+                                    <td class="table-cart-td">
+                                        <div class="cc">
+
+                                            <img src="./image/product-1.jpeg"  class="table-cart-img">
+                                        </div>
+                                        
+                                    </td>
+                                    <td class="table-cart-td">
+                                        قهوه مخصوص وودمارت</td>
+                                    <td class="table-cart-td">23,000تومان</td>
+                                    <td class="table-cart-td">
+                                        <div class="input-erap-detaile">
+                                            <input type="button" value="-" class="input-btn">
+                                            <input type="number" value="1" autocomplete="off" inputmode="numeric" class="input-number">
+                                            <input type="button" value="+" class="input-btn">
+                                        </div>
+                                    </td>
+                                    <td class="table-cart-td">12,000تومان</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="total-cart">
+                        <h2 class="total-cart-title">جمع کل سبد خرید</h2>
+                        <div class="total-box">
+                            <span>جمع جزء</span>
+                            <span class="total-pricce">12,000تومان</span>
+                        </div>
+                        <hr>
+                        <div class="total-box">
+                            <span>مجموع</span>
+                            <span>12,000تومان</span>
+                        </div>
+                        <div class="total-box-btn">
+                            <a href="#" class="total-box-link">ادامه جهت تسویه حساب</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

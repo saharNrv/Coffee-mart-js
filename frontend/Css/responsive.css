@@ -76,6 +76,10 @@
  .share-text{
   font-size: 25px;
  }
+ .header-cart{
+  height: 280px;
+  padding-top: 0px;
+ }
 }
 
 @media screen and (max-width: 768px) {
@@ -125,6 +129,9 @@
   .about-coffee-title{
     font-size: 35px;
   }
+  .inactive{
+    display: none;
+  }
   
 }
 @media screen and (max-width: 468px) {
@@ -139,6 +146,7 @@
   .header-infos__title {
     font-size: 30px;
   }
+ 
 }
 
 @media screen and (max-width: 375px) {
