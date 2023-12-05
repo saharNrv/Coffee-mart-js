@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./Css/index.css">
     <link rel="stylesheet" href="./Css/responsive.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Coffee-Home</title>
 </head>
@@ -95,7 +96,9 @@
         </div>
 
         <div class="header-infos">
-            <h1 class="header-infos__title">همه چیزهایی که در مورد قهوه باید بدونید!</h1>
+            <h1 class="header-infos__title">
+                <!-- load from js -->
+            </h1>
             <p class="header-infos__text">
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
                 متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
@@ -122,25 +125,20 @@
                 <div class="coffee-wraper">
                     <div class="coffee-list">
                         <ul class="coffee-menu">
-                            <li class="coffee-item coffee-item-active"><a href="#" class="coffee-link">همه</a></li>
-                            <li class="coffee-item"><a href="#" class="coffee-link">پر فروش</a></li>
-                            <li class="coffee-item"><a href="#" class="coffee-link">ویژه ها</a></li>
-                            <li class="coffee-item"><a href="#" class="coffee-link">قهوه خاص</a></li>
+                            <li class="coffee-item coffee-item-active" portdata="#full-coffee"><span  class="coffee-link"  >همه<span></li>
+                            <li class="coffee-item" portdata="#sale-coffee"><span class="coffee-link" >پر فروش</span></li>
+                            <li class="coffee-item" portdata="#special-coffee"><span class="coffee-link" >ویژه ها<span></li>
+                            <li class="coffee-item" portdata="#select-coffee"><span class="coffee-link" >قهوه خاص<span></li>
                         </ul>
-                        <!-- <div class="swiper mySwiper" id="coffee-swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><a href="#">همه</a></div>
-                                <div class="swiper-slide"><a href="#">پر فروش</a></div>
-                                <div class="swiper-slide"><a href="#">قهوه خاص</a></div>
+                       <!-- swiper menu -->
 
-                            </div>
-                            <div class="swiper-scrollbar"></div>
-                        </div> -->
+                      
+
                     </div>
-                    <div class="coffee-content">
+                    <div class="coffee-content coffee-content-active" id="full-coffee">
                         <div class="row">
                             <div class="col-12 col-xs-12 col-md-6 col-lg-3">
-                                <div class="coffee-box">
+                                <div class="coffee-box" >
                                     <div class="coffee-img-wrap">
                                         <a href="#" class="coffee-link-img">
                                             <img src="./image/product-8.jpg" class="coffee-img">
@@ -248,6 +246,184 @@
 
                         </div>
                     </div>
+                    <div class="coffee-content" id="sale-coffee">
+                        <div class="row">
+                            <div class="col-12 col-xs-12 col-md-6 col-lg-3">
+                                <div class="coffee-box">
+                                    <div class="coffee-img-wrap">
+                                        <a href="#" class="coffee-link-img">
+                                            <img src="./image/product-8.jpg" class="coffee-img">
+                                        </a>
+                                        <div class="coffee-img-wrap-hover">
+                                            <a href="#" class="coffee-link-img">
+                                                <img src="./image/product-8-2-back.jpeg" class="coffee-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="coffee-btn-wrap">
+                                        <a href="#" class="coffee-icon-link">
+                                            <i class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="#" class="coffee-icon-link coffee-icon-link-search">
+                                            <i class="fa-solid fa-magnifying-glass"
+                                                id="coffee-icon-link-search"></i></a>
+                                        <a href="#" class="coffee-icon-link"><i
+                                                class="fa-regular fa-heart"></i></a>
+                                    </div>
+                                    <div class="coffee-info">
+                                        <h3 class="coffee-info-title"><a href="#" class="coffee-info-title-link">قهوه
+                                                مخصوص وودمارت</a></h3>
+                                        <span>345,000 تومان</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xs-12 col-md-6 col-lg-3">
+                                <div class="coffee-box">
+                                    <div class="coffee-img-wrap">
+                                        <a href="#" class="coffee-link-img">
+                                            <img src="./image/product-1.jpeg" class="coffee-img">
+                                        </a>
+                                        <div class="coffee-img-wrap-hover">
+                                            <a href="#" class="coffee-link-img">
+                                                <img src="./image/product-2-back.jpeg" class="coffee-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="coffee-btn-wrap">
+                                        <a href="#" class="coffee-icon-link"><i
+                                                class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="#" class="coffee-icon-link coffee-icon-link-search"><i
+                                                class="fa-solid fa-magnifying-glass"></i></a>
+                                        <a href="#" class="coffee-icon-link"><i class="fa-regular fa-heart"></i></a>
+                                    </div>
+                                    <div class="coffee-info">
+                                        <h3 class="coffee-info-title"><a href="#" class="coffee-info-title-link">قهوه
+                                                مخصوص وودمارت</a></h3>
+                                        <span>345,000 تومان</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xs-12 col-md-6 col-lg-3">
+                                <div class="coffee-box">
+                                    <div class="coffee-img-wrap">
+                                        <a href="#" class="coffee-link-img">
+                                            <img src="./image/product-2.jpeg" class="coffee-img">
+                                        </a>
+                                        <div class="coffee-img-wrap-hover">
+                                            <a href="#" class="coffee-link-img">
+                                                <img src="./image/product-8-2-back.jpeg" class="coffee-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="coffee-btn-wrap">
+                                        <a href="#" class="coffee-icon-link"><i
+                                                class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="#" class="coffee-icon-link coffee-icon-link-search"><i
+                                                class="fa-solid fa-magnifying-glass"></i></a>
+                                        <a href="#" class="coffee-icon-link"><i class="fa-regular fa-heart"></i></a>
+                                    </div>
+                                    <div class="coffee-info">
+                                        <h3 class="coffee-info-title"><a href="#" class="coffee-info-title-link">قهوه
+                                                مخصوص وودمارت</a></h3>
+                                        <span>345,000 تومان</span>
+                                    </div>
+                                </div>
+                            </div>
+                           
+
+                        </div>
+                    </div>
+                    <div class="coffee-content" id="special-coffee">
+                        <div class="row">
+                           
+                            <div class="col-12 col-xs-12 ">
+                                <div class="coffee-box">
+                                    <div class="coffee-img-wrap">
+                                        <a href="#" class="coffee-link-img">
+                                            <img src="./image/product-1.jpeg" class="coffee-img">
+                                        </a>
+                                        <div class="coffee-img-wrap-hover">
+                                            <a href="#" class="coffee-link-img">
+                                                <img src="./image/product-2-back.jpeg" class="coffee-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="coffee-btn-wrap">
+                                        <a href="#" class="coffee-icon-link"><i
+                                                class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="#" class="coffee-icon-link coffee-icon-link-search"><i
+                                                class="fa-solid fa-magnifying-glass"></i></a>
+                                        <a href="#" class="coffee-icon-link"><i class="fa-regular fa-heart"></i></a>
+                                    </div>
+                                    <div class="coffee-info">
+                                        <h3 class="coffee-info-title"><a href="#" class="coffee-info-title-link">قهوه
+                                                مخصوص وودمارت</a></h3>
+                                        <span>345,000 تومان</span>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                           
+
+                        </div>
+                    </div>
+                    <div class="coffee-content" id="select-coffee">
+                        <div class="row">
+                          
+                            <div class="col-12 col-xs-12 col-md-6 col-lg-3">
+                                <div class="coffee-box">
+                                    <div class="coffee-img-wrap">
+                                        <a href="#" class="coffee-link-img">
+                                            <img src="./image/product-2.jpeg" class="coffee-img">
+                                        </a>
+                                        <div class="coffee-img-wrap-hover">
+                                            <a href="#" class="coffee-link-img">
+                                                <img src="./image/product-8-2-back.jpeg" class="coffee-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="coffee-btn-wrap">
+                                        <a href="#" class="coffee-icon-link"><i
+                                                class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="#" class="coffee-icon-link coffee-icon-link-search"><i
+                                                class="fa-solid fa-magnifying-glass"></i></a>
+                                        <a href="#" class="coffee-icon-link"><i class="fa-regular fa-heart"></i></a>
+                                    </div>
+                                    <div class="coffee-info">
+                                        <h3 class="coffee-info-title"><a href="#" class="coffee-info-title-link">قهوه
+                                                مخصوص وودمارت</a></h3>
+                                        <span>345,000 تومان</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xs-12 col-md-6 col-lg-3">
+                                <div class="coffee-box">
+                                    <div class="coffee-img-wrap">
+                                        <a href="#" class="coffee-link-img">
+                                            <img src="./image/product-8.jpg" class="coffee-img">
+                                        </a>
+                                        <div class="coffee-img-wrap-hover">
+                                            <a href="#" class="coffee-link-img">
+                                                <img src="./image/product-8-2-back.jpeg" class="coffee-img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="coffee-btn-wrap">
+                                        <a href="#" class="coffee-icon-link"><i
+                                                class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="#" class="coffee-icon-link coffee-icon-link-search"><i
+                                                class="fa-solid fa-magnifying-glass"></i></a>
+                                        <a href="#" class="coffee-icon-link"><i class="fa-regular fa-heart"></i></a>
+                                    </div>
+                                    <div class="coffee-info">
+                                        <h3 class="coffee-info-title"><a href="#" class="coffee-info-title-link">قهوه
+                                                مخصوص وودمارت</a></h3>
+                                        <span>345,000 تومان</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
         </section>
 
@@ -255,7 +431,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-xs-12 col-md-12 col-lg-6">
-                        <div class="elementor-shop">
+                        <div class="elementor-shop" data-aos="fade-left" data-aos-duration="1000">
                             <div class="elementor-shop-find">
                                 <h2 class="elementor-find-title">کافی شاپ ما را ببینید</h2>
                                 <p class="elementor-fint-text">طراحی دور از ذهن نیست.</p>
@@ -290,7 +466,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-xs-12 col-md-6 col-lg-3">
-                        <div class="coffee-box">
+                        <div class="coffee-box" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                             <div class="coffee-img-wrap">
                                 <a href="#" class="coffee-link-img">
                                     <img src="./image/product-8.jpg" class="coffee-img">
@@ -315,7 +491,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-xs-12 col-md-6 col-lg-3">
-                        <div class="coffee-box">
+                        <div class="coffee-box" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                             <div class="coffee-img-wrap">
                                 <a href="#" class="coffee-link-img">
                                     <img src="./image/product-8.jpg" class="coffee-img">
@@ -340,7 +516,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-xs-12 col-md-6 col-lg-3">
-                        <div class="coffee-box">
+                        <div class="coffee-box" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                             <div class="coffee-img-wrap">
                                 <a href="#" class="coffee-link-img">
                                     <img src="./image/product-8.jpg" class="coffee-img">
@@ -365,7 +541,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-xs-12 col-md-6 col-lg-3">
-                        <div class="coffee-box">
+                        <div class="coffee-box" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                             <div class="coffee-img-wrap">
                                 <a href="#" class="coffee-link-img">
                                     <img src="./image/product-8.jpg" class="coffee-img">
@@ -420,7 +596,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-xs-12 col-lg-6 ">
-                        <div class="about-img-wrap">
+                        <div class="about-img-wrap" data-aos="fade-right" data-aos-duration="1000">
 
                             <img src="./image/w-coffee-parallax-scroll-2-opt.jpg" class="about-img">
                         </div>
@@ -654,6 +830,10 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>

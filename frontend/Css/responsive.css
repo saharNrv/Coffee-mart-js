@@ -80,6 +80,12 @@
   height: 280px;
   padding-top: 0px;
  }
+ .blog-header{
+  height: 220px;
+ }
+ #blog-col-4{
+  display: none;
+ }
 }
 
 @media screen and (max-width: 768px) {
@@ -115,6 +121,12 @@
   .footer-list {
     margin-top: 30px;
   }
+  .table-wrapper{
+    display: none;
+  }
+  .table-wrapper-mobail{
+    display: block;
+  }
 }
 @media screen and (max-width: 576px) {
   .nav-mobail-icon {
@@ -132,7 +144,9 @@
   .inactive{
     display: none;
   }
-  
+  .blog-right-desc{
+    line-height: 1.6;
+  }
 }
 @media screen and (max-width: 468px) {
   .header-infos__title {
@@ -146,12 +160,35 @@
   .header-infos__title {
     font-size: 30px;
   }
- 
+  .comment-title,.write-comment-title{
+    font-size: 22px;
+  }
+  .write-comment-form-btn{
+    width: 100%;
+  }
+  .write-comment-input-wrap{
+    display: block;
+  }
+ .write-comment-input-wrap > p{
+  width: 100%;
+
+ }
 }
 
 @media screen and (max-width: 375px) {
  .coffee-menu{
-  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+ }
+ .coffee-item {
+  padding: 10px;
+  background-color: #42a68f;
+  
+  text-align: center;
+  border-radius: 3px;
+
  }
 }
 @media screen and (max-width: 345px) {
@@ -187,5 +224,11 @@
   }
   .elementor-relation-title {
     font-size: 20px;
+  }
+  .table-wrapper-mobail-title{
+    font-size: 18px;
+  }
+  .table-wrapper-mobail-delete{
+    font-size: 12px;
   }
 }

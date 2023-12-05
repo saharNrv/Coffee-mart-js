@@ -1,0 +1,108 @@
+@import "./reset.css";
+@import "./font.css";
+@import "./custom.css";
+@import "./share.css";
+
+.login{
+    height: 280px;
+    background-color: var(--primary-color);
+}
+.login-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 20px;
+    padding-top: 40px;
+    color: #fff;
+}
+
+.login-wrapper{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: url('../image/w-coffee-bg-opt.jpg')  no-repeat;
+    margin: 50px 0px 100px 0px;
+
+}
+
+.login-form-wrap{
+    border-radius: 10px;
+    background: #fff;
+    width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    padding: 30px 20px;
+    margin: 10px ;
+
+}
+.login-form-wrap-title{
+    text-align: center;
+    font-size: 22px;
+    
+}
+.new-register{
+    background-color: #f0f2f7;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 20px 0px;
+}
+.new-register a{
+    background-color: #a8aaaf;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #fff;
+}
+.new-register a:hover{
+    color: blue;
+}
+.login-input-wrap{
+    position: relative;
+}
+.login-input{
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+    margin:10px 0px;
+    border-radius: 3px;
+    font-size: 18px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
+    outline: none;
+
+}
+.login-icon{
+   position: absolute;
+   left: 20px;
+   top: 22px;
+   font-size: 18px;
+   color: #ccc;
+}
+.login-submit{
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: var(--primary-color);
+    cursor: pointer;
+
+}
+.login-des{
+    margin-top: 60px;
+    color: #7b868a;
+    width: 100%;
+    font-size: 14px;
+}
+.login-des-list{
+    list-style-type: disc;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    
+
+}
+.login-des-item{
+    margin-top: 10px;
+}
+
+

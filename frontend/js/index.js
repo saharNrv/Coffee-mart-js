@@ -8,12 +8,39 @@ const basketClose=document.querySelector('.basket-close')
 const coffeeSearch=document.querySelectorAll('.coffee-icon-link-search')
 const detaileBox=document.querySelector('.detaile-box')
 const detailClose=document.querySelector('.detail-close')
+const coffeeItemElems=document.querySelectorAll('.coffee-item')
+
 
 const coffeeBox=document.querySelector('.coffee-box')
 const coffeeImg=document.querySelector('.coffee-img')
 const coffeeLinkBox=document.querySelector('.coffee-link-box')
+const headerTitle=document.querySelector('.header-infos__title')
+let landingText='همه چیزهایی که در مورد قهوه باید بدونید!'
+let indexText=0
 
-console.log(navShoppTwo);
+window.addEventListener('load',()=>{
+    typeWriter(landingText,indexText)
+
+})
+
+
+function typeWriter(text,index){
+
+    if(index<text.length){
+        headerTitle.innerHTML +=text[index]
+        index++
+    }
+
+    setTimeout(()=>{
+        typeWriter(text,index)
+    },100)
+
+}
+
+
+
+
+
 
 
 menuBar.addEventListener('click',()=>{
@@ -61,4 +88,22 @@ coffeeSearch.forEach(eve=>{
 detailClose.addEventListener('click',()=>{
     detaileBox.classList.toggle('detaile-box-active')
     bg.classList.toggle('active')
+})
+
+
+coffeeItemElems.forEach(item=>{
+    console.log(item);
+    item.addEventListener('click',function(){
+
+       
+        document.querySelector('.coffee-item-active').classList.remove('coffee-item-active')
+        document.querySelector('.coffee-content-active').classList.remove('coffee-content-active')
+        
+        this.classList.add('coffee-item-active')
+        let contentMenu=this.getAttribute('portdata')
+        console.log(contentMenu);
+        document.querySelector(contentMenu).classList.add('coffee-content-active')
+
+        console.log('click');
+    })
 })

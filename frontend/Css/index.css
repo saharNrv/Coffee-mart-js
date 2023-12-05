@@ -64,6 +64,7 @@
   display: flex;
 }
 .coffee-item {
+  
 }
 .coffee-link {
   width: 80px;
@@ -76,8 +77,15 @@
 /* coffee box style */
 .coffee-content {
   margin-top: 50px;
+  display: none;
 }
-
+.coffee-content-active{
+  display: block;
+  transition: all 0.5s ease-in;
+}
+.coffee-item-active{
+  color: red;
+}
 .coffee-box {
   width: 100%;
   display: flex;
@@ -341,59 +349,6 @@
 }
 /* footer style */
 
-.footer {
-  background-color: var(--primary-color);
-
-  margin-top: -35px;
-  padding-top: 60px;
-}
-.footer-right {
-}
-.footer-logo {
-  /* max-width: 300px; */
-}
-.white-logo {
-  width: 60%;
-}
-.footer-text {
-  line-height: 1.6;
-  margin-top: 60px;
-  color: #8d8d8d;
-}
-.footer-phone-wrap {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  color: #8d8d8d;
-}
-.footer-phone {
-  color: #8ed556;
-  text-decoration: underline;
-  margin-right: 5px;
-}
-
-.footer-list {
-  margin-top: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.footer-list-title {
-  font-size: 18px;
-  color: #fff;
-}
-.footer-item {
-  margin-top: 15px;
-}
-.footer-link {
-  color: #8d8d8d;
-  transition: all 0.5s ease;
-}
-.footer-link:hover {
-  color: #fff;
-}
 /* basket style */
 .basket {
   width: 300px;
