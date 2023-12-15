@@ -10,6 +10,15 @@ const detaileBox = document.querySelector('.detaile-box')
 const detailClose = document.querySelector('.detail-close')
 // const coffeeItemElems=document.querySelectorAll('.coffee-item')
 
+const coffeeItemsElem = document.querySelectorAll('.coffee-item')
+const coffeeContentWrap = document.querySelector('#coffee-content')
+const detaileImgElem=document.querySelector('.detaile-img')
+const detaileTitleElem=document.querySelector('.detaile-title')
+const detailePriceElem=document.querySelector('.detaile-price')
+const addBtn=document.querySelector('.add-btn')
+const minusBtn=document.querySelector('.minus-btn')
+const inputNumber=document.querySelector('.input-number')
+
 
 const coffeeBox = document.querySelector('.coffee-box')
 const coffeeImg = document.querySelector('.coffee-img')
@@ -71,6 +80,7 @@ bg.addEventListener('click', () => {
     basket.classList.remove('basket-left')
     bg.classList.remove('active')
     detaileBox.classList.toggle('detaile-box-active')
+    inputNumber.value=1
 
 })
 ///////////////////////
@@ -88,6 +98,7 @@ bg.addEventListener('click', () => {
 detailClose.addEventListener('click', () => {
     detaileBox.classList.toggle('detaile-box-active')
     bg.classList.toggle('active')
+    inputNumber.value=1
 })
 
 
@@ -108,13 +119,7 @@ detailClose.addEventListener('click', () => {
 //     })
 // })
 // ///////////////////coffee menu
-const coffeeItemsElem = document.querySelectorAll('.coffee-item')
-const coffeeContentWrap = document.querySelector('#coffee-content')
-const detaileImgElem=document.querySelector('.detaile-img')
-const detaileTitleElem=document.querySelector('.detaile-title')
-const detailePriceElem=document.querySelector('.detaile-price')
-const addBtn=document.querySelector('.add-btn')
-const inputNumber=document.querySelector('.input-number')
+
 
 let detailArray=[];
 
@@ -159,23 +164,12 @@ fetch('http://localhost:3000/products')
        dataIds.push(data.id);
    })
    
-   
-//    const coffeeSearchElems=document.querySelectorAll('.coffe-search-js')
-//    coffeeSearchElems.forEach(search=>{
-//        search.addEventListener('click',(e)=>{
-//            const parent = coffeeSearchElems[0].closest('.coffee-box');
-//            const productId = e.currentTarget.id;
-//            const dataId = dataIds[e.target.parentNode.querySelector('.coffee-info-title-link')];
-//            console.log(e);
-//            console.log(dataId);
-//        })
 
-//    })
       
 })
-// console.log(detailArray);
+
 const searchHandel=(id)=>{
-    // console.log(id);
+   
     detaileBox.classList.toggle('detaile-box-active')
     bg.classList.add('active')
 
@@ -190,10 +184,26 @@ const searchHandel=(id)=>{
 
       let count= inputNumber.value++;
       
-      let c=Number(b[0].price)*inputNumber.value
-      detailePriceElem.innerHTML=`${c}`
-      console.log(c);
-    //   console.log(count);
+      let increasePrice=Number(b[0].price)*inputNumber.value
+      detailePriceElem.innerHTML=`${increasePrice}`
+     
+    })
+    minusBtn.addEventListener('click',(e)=>{
+        e.preventDefault()
+
+
+        let count= inputNumber.value--;
+        if(inputNumber.value<=1){
+         detailePriceElem.innerHTML=`${b[0].price}`
+         inputNumber.value=1
+
+        }else{
+
+            let increasePrice=Number(b[0].price)*inputNumber.value
+            detailePriceElem.innerHTML=`${increasePrice}`
+        }
+        
+       
     })
 
 }
