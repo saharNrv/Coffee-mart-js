@@ -83,6 +83,9 @@
   display: block;
   transition: all 0.5s ease-in;
 }
+.coffee-item{
+  cursor: pointer;
+}
 .coffee-item-active{
   color: red;
 }
