@@ -1,41 +1,53 @@
 {
-    "products":[
-     {
-         "id":1,
-         "name":"قهوه فرانسه",
-         "price":15000,
-         "img":"./image/product-8.jpg",
-         "imgBack":"./image/product-2-back.jpeg"
-     },
-     {
-         "id":2,
-         "name":"قهوه کنیا",
-         "price":29000,
-         "img":"./image/product-1.jpeg",
-         "imgBack":"./image/product-8-2-back.jpeg"
+  "products": [
+    {
+      "id": 1,
+      "name": "قهوه فرانسه",
+      "price": 15000,
+      "img": "./image/product-8.jpg",
+      "imgBack": "./image/product-2-back.jpeg"
     },
     {
-        "id":3,
-        "name":"قهوه ترک",
-        "price":149000,
-        "img":"./image/product-2.jpeg",
-        "imgBack":"./image/product-2-back.jpeg"
-    },
-        {
-            "id":4,
-        "name":"قهوه مخصوص وودمارت",
-        "price":15500,
-        "img":"./image/product-8.jpg",
-        "imgBack":"./image/product-8-2-back.jpeg"
+      "id": 2,
+      "name": "قهوه کنیا",
+      "price": 29000,
+      "img": "./image/product-1.jpeg",
+      "imgBack": "./image/product-8-2-back.jpeg"
     },
     {
-        "id":5,
-        "name":"قهوه ایتالیا",
-        "price":33000,
-        "img":"./image/product-1.jpeg",
-        "imgBack":"./image/product-2-back.jpeg"
+      "id": 3,
+      "name": "قهوه ترک",
+      "price": 149000,
+      "img": "./image/product-2.jpeg",
+      "imgBack": "./image/product-2-back.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "قهوه مخصوص وودمارت",
+      "price": 15500,
+      "img": "./image/product-8.jpg",
+      "imgBack": "./image/product-8-2-back.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "قهوه ایتالیا",
+      "price": 33000,
+      "img": "./image/product-1.jpeg",
+      "imgBack": "./image/product-2-back.jpeg"
     }
-
-]
-
+  ],
+  "productCart": [
+    {
+      "id": 3,
+      "name": "قهوه ترک",
+      "price": 149000,
+      "count": "2"
+    },
+    {
+      "id": 2,
+      "name": "قهوه کنیا",
+      "price": 29000,
+      "count": "1"
+    }
+  ]
 }

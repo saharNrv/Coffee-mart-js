@@ -18,6 +18,7 @@ const detailePriceElem=document.querySelector('.detaile-price')
 const addBtn=document.querySelector('.add-btn')
 const minusBtn=document.querySelector('.minus-btn')
 const inputNumber=document.querySelector('.input-number')
+const detailFormBtn=document.querySelector('.detail-form-btn')
 
 
 const coffeeBox = document.querySelector('.coffee-box')
@@ -172,9 +173,10 @@ const searchHandel=(id)=>{
    
     detaileBox.classList.toggle('detaile-box-active')
     bg.classList.add('active')
+    
 
     const b=detailArray[0].filter(detail=> detail.id===id )
-    console.log(b[0]);
+   
     detaileImgElem.setAttribute('src',`${b[0].img}`)
     detaileTitleElem.innerHTML=`${b[0].name}`
     detailePriceElem.innerHTML=`${b[0].price}`
@@ -203,6 +205,32 @@ const searchHandel=(id)=>{
             detailePriceElem.innerHTML=`${increasePrice}`
         }
         
+       
+    })
+    
+    detailFormBtn.addEventListener('click',(e)=>{
+      
+        e.preventDefault()
+        let newCartProduct={
+            id:b[0].id,
+            name:b[0].name,
+            price:(b[0].price*inputNumber.value),
+            count:inputNumber.value
+        }
+
+       fetch('http://localhost:3000/productCart',{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify(newCartProduct)
+       })
+       .then(res=>{
+        console.log(res);
+        if(res.status===500){
+            swal("این محصول در سبد موجود است", "success");
+        }
+       })
        
     })
 
