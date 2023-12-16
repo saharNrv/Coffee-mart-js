@@ -57,9 +57,14 @@
       "price": 15000,
       "count": "1",
       "img": "./image/product-8.jpg"
+    },
+    {
+      "id": 3,
+      "name": "قهوه ترک",
+      "price": 596000,
+      "count": "4",
+      "img": "./image/product-2.jpeg"
     }
   ],
-  "favoriteProduct":[
-    
-  ]
+  "favoriteProduct": []
 }

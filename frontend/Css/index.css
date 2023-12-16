@@ -139,6 +139,7 @@
 .coffee-icon-link {
   display: block;
   font-size: 20px;
+  cursor: pointer;
 }
 .coffee-info {
   text-align: center;
