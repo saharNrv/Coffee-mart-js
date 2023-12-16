@@ -5,7 +5,7 @@ const navShopp = document.querySelector('#nav-shopp')
 const navShoppTwo = document.querySelector('#nav-shopp-2')
 const basket = document.querySelector('.basket')
 const basketClose = document.querySelector('.basket-close')
-// const coffeeSearch = document.querySelectorAll('.coffee-icon-link-search')
+const nav = document.querySelector('.nav')
 const detaileBox = document.querySelector('.detaile-box')
 const detailClose = document.querySelector('.detail-close')
 // const coffeeItemElems=document.querySelectorAll('.coffee-item')
@@ -89,7 +89,15 @@ function productCoffee() {
 }
 
 
+window.addEventListener('scroll',()=>{
+    let scrolly=window.scrollY
+    if(scrolly>0){
+        nav.classList.add('nav-scroll')
+    }else{
+        nav.classList.remove('nav-scroll')
 
+    }
+})
 
 window.addEventListener('load', () => {
     typeWriter(landingText, indexText)

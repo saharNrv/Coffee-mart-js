@@ -15,7 +15,12 @@
     top: 25px;
     z-index: 20;
   }
-  
+  .nav-scroll{
+    top: 0;
+    max-width: 100%;
+    padding: 0px 60px;
+    box-shadow: 0 0 12px #ccc;
+  }
   .logo {
     width: 70%;
   }
