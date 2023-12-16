@@ -38,16 +38,28 @@
   ],
   "productCart": [
     {
-      "id": 3,
-      "name": "قهوه ترک",
-      "price": 149000,
-      "count": "2"
-    },
-    {
       "id": 2,
       "name": "قهوه کنیا",
       "price": 29000,
-      "count": "1"
+      "count": "1",
+      "img": "./image/product-1.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "قهوه مخصوص وودمارت",
+      "price": 15500,
+      "count": "1",
+      "img": "./image/product-8.jpg"
+    },
+    {
+      "id": 1,
+      "name": "قهوه فرانسه",
+      "price": 15000,
+      "count": "1",
+      "img": "./image/product-8.jpg"
     }
+  ],
+  "favoriteProduct":[
+    
   ]
 }

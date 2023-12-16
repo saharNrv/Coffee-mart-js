@@ -233,6 +233,7 @@
 /* about coffee style */
 .about-coffee {
   margin-top: 50px;
+  
 }
 .about-coffee-info {
   height: 450px;
@@ -387,6 +388,15 @@
 }
 .basket-item {
   border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.basket-link-close{
+  position: absolute;
+  top: 8px;
+  left: 8px;
+cursor: pointer;
+font-size: 18px;
+font-weight: bold;
 }
 .basket-link {
   display: flex;

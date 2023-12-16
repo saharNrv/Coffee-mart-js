@@ -19,6 +19,7 @@ const addBtn=document.querySelector('.add-btn')
 const minusBtn=document.querySelector('.minus-btn')
 const inputNumber=document.querySelector('.input-number')
 const detailFormBtn=document.querySelector('.detail-form-btn')
+const basketMenuElem=document.querySelector('.basket-menu')
 
 
 const coffeeBox = document.querySelector('.coffee-box')
@@ -146,13 +147,16 @@ fetch('http://localhost:3000/products')
                                    </div>
                                </div>
                                <div class="coffee-btn-wrap">
-                                   <a href="#" class="coffee-icon-link">
-                                       <i class="fa-solid fa-cart-shopping"></i></a>
+                                   <span  class="coffee-icon-link" onClick="basketHnadler(${data.id})">
+                                       <i class="fa-solid fa-cart-shopping"></i>
+                                       </span>
                                    <span class="coffee-icon-link coffee-icon-link-search coffe-search-js" onClick="searchHandel(${data.id})">
                                        <i class="fa-solid fa-magnifying-glass"
-                                           id="coffee-icon-link-search"></i></span>
-                                   <a href="#" class="coffee-icon-link"><i
-                                           class="fa-regular fa-heart"></i></a>
+                                           id="coffee-icon-link-search"></i>
+                                    </span>
+                                   <span class="coffee-icon-link" onClick="favoritHandler()">
+                                   <i class="fa-regular fa-heart"></i>
+                                   </span>
                                </div>
                                <div class="coffee-info">
                                    <h3 class="coffee-info-title"><a href="#" class="coffee-info-title-link">${data.name}</a></h3>
@@ -169,6 +173,30 @@ fetch('http://localhost:3000/products')
       
 })
 
+/*function for post fetch product */
+
+function postProduct(objectPro){
+    fetch('http://localhost:3000/productCart',{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify(objectPro)
+       })
+       .then(res=>{
+        console.log(res);
+        if(res.status===500){
+            swal({
+               icon:'success',
+               title:'این محصول در سبد خرید قرار دارد',
+              button:'باشه'
+            })
+        }
+       })
+}
+
+
+/* search icon js handel */
 const searchHandel=(id)=>{
    
     detaileBox.classList.toggle('detaile-box-active')
@@ -179,7 +207,7 @@ const searchHandel=(id)=>{
    
     detaileImgElem.setAttribute('src',`${b[0].img}`)
     detaileTitleElem.innerHTML=`${b[0].name}`
-    detailePriceElem.innerHTML=`${b[0].price}`
+    detailePriceElem.innerHTML=`${b[0].price} تومان`
 
     addBtn.addEventListener('click',(e)=>{
         e.preventDefault()
@@ -215,28 +243,64 @@ const searchHandel=(id)=>{
             id:b[0].id,
             name:b[0].name,
             price:(b[0].price*inputNumber.value),
-            count:inputNumber.value
+            count:inputNumber.value,
+            img:b[0].img
         }
 
-       fetch('http://localhost:3000/productCart',{
-        method:"POST",
-        headers:{
-            "Content-Type":"application/json"
-        },
-        body:JSON.stringify(newCartProduct)
-       })
-       .then(res=>{
-        console.log(res);
-        if(res.status===500){
-            swal("این محصول در سبد موجود است", "success");
-        }
-       })
+      
+postProduct(newCartProduct)
+      
        
     })
 
 }
+/* basket icon js handler*/
+
+const basketHnadler=(basketID)=>{
+    
+    const b=detailArray[0].filter(detail=> detail.id===basketID )
+   
+    let newCartProduct={
+        id:b[0].id,
+        name:b[0].name,
+        price:(b[0].price*inputNumber.value),
+        count:inputNumber.value,
+        img:b[0].img
+    }
+
+    postProduct(newCartProduct)
+
+}
 
 
+
+
+
+
+
+fetch('http://localhost:3000/productCart')
+    .then(res=>res.json())
+    .then(data=>{
+        data.map(item=>{
+            basketMenuElem.insertAdjacentHTML('beforeend',`
+            <li class="basket-item">
+            <a href="#" class="basket-link">
+            <div class="basket-pro">
+                <img src=${item.img} class="basket-img">
+            </div>
+            <div class="basket-info">
+                <h3 class="basket-info-title">${item.name}</h3>
+                <div class="basket-info-price">
+                    <span class="basket-price">${item.price} تومان</span>
+                    <span class="basket-count">x${item.count}</span>
+                </div>
+            </div>
+        </a>
+        <div class="basket-link-close">X</div>
+        </li>
+            `)
+        })
+    })
 
 
 coffeeItemsElem.forEach(item => {
