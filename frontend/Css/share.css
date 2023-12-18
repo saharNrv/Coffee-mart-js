@@ -126,7 +126,7 @@
     position: fixed;
     left: -320px;
     top: 0px;
-    z-index: 2;
+    z-index: 23;
     height: 100%;
     transition: all 1s ease-in;
   }

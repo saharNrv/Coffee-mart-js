@@ -387,6 +387,10 @@
   font-size: 30px;
   cursor: pointer;
 }
+.basket-menu{
+  height: 700px;
+  overflow-y: scroll;
+}
 .basket-item {
   border-bottom: 1px solid #ccc;
   position: relative;
@@ -430,6 +434,7 @@ font-weight: bold;
   padding: 20px;
   width: 100%;
   border-top: 1px solid #ccc;
+  background-color: #fff;
 }
 .basket-detaile-title {
   font-size: 20px;

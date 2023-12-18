@@ -26,6 +26,7 @@ const saleItem=document.querySelector('#sale')
 const specialItem=document.querySelector('#special')
 const selectItem=document.querySelector('#select')
 const navNum=document.querySelector('.nav-num')
+const swiperWrapperElem=document.querySelector('#swiper-wrapper')
 
 
 let detailArray = [];
@@ -106,7 +107,12 @@ window.addEventListener('load', () => {
     productCoffee()
     start=0;
     end=4;
-   
+
+    fetch('http://localhost:3000/productCart')
+      .then(res=>res.json())
+      .then(cartData=>{
+       navNum.innerHTML=`${cartData.length}`
+      })
 
 })
 
@@ -157,7 +163,7 @@ bg.addEventListener('click', () => {
     menuMobail.classList.remove('active-menu')
     basket.classList.remove('basket-left')
     bg.classList.remove('active')
-    detaileBox.classList.toggle('detaile-box-active')
+    detaileBox.classList.remove('detaile-box-active')
     inputNumber.value = 1
 
 })
@@ -174,7 +180,7 @@ bg.addEventListener('click', () => {
 //     })
 // })
 detailClose.addEventListener('click', () => {
-    detaileBox.classList.toggle('detaile-box-active')
+    detaileBox.classList.add('detaile-box-active')
     bg.classList.toggle('active')
     inputNumber.value = 1
 })
@@ -376,3 +382,4 @@ coffeeItemsElem.forEach(item => {
 
     })
 })
+

@@ -45,12 +45,48 @@
       "img": "./image/product-8.jpg"
     },
     {
+      "id": 5,
+      "name": "قهوه ایتالیا",
+      "price": 33000,
+      "count": "1",
+      "img": "./image/product-1.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "قهوه ترک",
+      "price": 149000,
+      "count": "1",
+      "img": "./image/product-2.jpeg"
+    },
+    {
       "id": 4,
       "name": "قهوه مخصوص وودمارت",
-      "price": 31000,
-      "count": "2",
+      "price": 15500,
+      "count": "1",
       "img": "./image/product-8.jpg"
     }
   ],
-  "favoriteProduct": []
+  "favoriteProduct": [],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "دکور داخلی جدید",
+      "img": "./image/blog-1.jpeg"
+    },
+    {
+      "id": 2,
+      "title": "طراحی داخلی مینیمال ژاپنی",
+      "img": "./image/blog-2.jpeg"
+    },
+    {
+      "id": 3,
+      "title": "طراحی و نقاشی دیواری شهری",
+      "img": "./image/blog-3.jpeg"
+    },
+    {
+      "id": 4,
+      "title": "طراحی نمای ساختمانی",
+      "img": "./image/blog-4.jpeg"
+    }
+  ]
 }
