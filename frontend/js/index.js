@@ -25,6 +25,8 @@ const allItem = document.querySelector('#all')
 const saleItem=document.querySelector('#sale')
 const specialItem=document.querySelector('#special')
 const selectItem=document.querySelector('#select')
+const navNum=document.querySelector('.nav-num')
+
 
 let detailArray = [];
 
@@ -104,6 +106,7 @@ window.addEventListener('load', () => {
     productCoffee()
     start=0;
     end=4;
+   
 
 })
 
@@ -314,10 +317,13 @@ selectItem.addEventListener('click',()=>{
  start=4;
  end=5;
 })
+let basketArray=[]
 
-fetch('http://localhost:3000/productCart')
+    fetch('http://localhost:3000/productCart')
     .then(res => res.json())
     .then(data => {
+       
+        basketArray.push(data)
         data.map(item => {
             basketMenuElem.insertAdjacentHTML('beforeend', `
             <li class="basket-item">
@@ -333,11 +339,26 @@ fetch('http://localhost:3000/productCart')
                 </div>
             </div>
         </a>
-        <div class="basket-link-close">X</div>
+        <div class="basket-link-close" onClick="closeItemBasket(${item.id})">X</div>
         </li>
             `)
         })
     })
+
+
+
+    const closeItemBasket=(closeID)=>{
+        const basketFilter=basketArray[0].filter(basket=>basket.id !==closeID)
+        console.log(closeID);
+       
+        fetch(`http://localhost:3000/productCart/${closeID}`,{
+            method:"DELETE"
+        }).then(res=>{
+            console.log(res);
+        })
+    
+
+    }
 
 
 coffeeItemsElem.forEach(item => {
