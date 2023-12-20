@@ -24,7 +24,7 @@
     {
       "id": 4,
       "name": "قهوه مخصوص وودمارت",
-      "price": 15500,
+      "price": 32000,
       "img": "./image/product-8.jpg",
       "imgBack": "./image/product-8-2-back.jpeg"
     },
@@ -38,32 +38,11 @@
   ],
   "productCart": [
     {
-      "id": 1,
-      "name": "قهوه فرانسه",
-      "price": 15000,
-      "count": "1",
-      "img": "./image/product-8.jpg"
-    },
-    {
-      "id": 5,
-      "name": "قهوه ایتالیا",
-      "price": 33000,
-      "count": "1",
-      "img": "./image/product-1.jpeg"
-    },
-    {
       "id": 3,
       "name": "قهوه ترک",
       "price": 149000,
       "count": "1",
       "img": "./image/product-2.jpeg"
-    },
-    {
-      "id": 4,
-      "name": "قهوه مخصوص وودمارت",
-      "price": 15500,
-      "count": "1",
-      "img": "./image/product-8.jpg"
     }
   ],
   "favoriteProduct": [],

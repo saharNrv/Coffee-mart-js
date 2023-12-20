@@ -388,8 +388,8 @@
   cursor: pointer;
 }
 .basket-menu{
-  height: 700px;
-  overflow-y: scroll;
+  height: 400px;
+  overflow-y: auto;
 }
 .basket-item {
   border-bottom: 1px solid #ccc;

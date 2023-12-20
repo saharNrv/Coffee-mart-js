@@ -27,6 +27,7 @@ const specialItem=document.querySelector('#special')
 const selectItem=document.querySelector('#select')
 const navNum=document.querySelector('.nav-num')
 const swiperWrapperElem=document.querySelector('#swiper-wrapper')
+const basketTotalPriceElem=document.querySelector('.basket-detaile-price')
 
 
 let detailArray = [];
@@ -168,20 +169,10 @@ bg.addEventListener('click', () => {
 
 })
 ///////////////////////
-// coffeeSearch.addEventListener('click',(event)=>{
-//     event.preventDefault()
-//     console.log('click');
-//     detaileBox.computedStyleMap.display='flex'
-// })
-// coffeeSearch.forEach(eve => {
-//     eve.addEventListener('click', () => {
-//         detaileBox.classList.toggle('detaile-box-active')
-//         bg.classList.toggle('active')
-//     })
-// })
+
 detailClose.addEventListener('click', () => {
-    detaileBox.classList.add('detaile-box-active')
-    bg.classList.toggle('active')
+    detaileBox.classList.remove('detaile-box-active')
+    bg.classList.remove('active')
     inputNumber.value = 1
 })
 
@@ -302,8 +293,9 @@ coffeeItems.forEach(item => {
 allItem.addEventListener('click', () => {
     coffeeContentWrap.innerHTML=''
     productCoffee()
-start=0;
-end=5;
+    start=0;
+    end=5;
+
 })
 
 saleItem.addEventListener('click',()=>{
@@ -323,13 +315,13 @@ selectItem.addEventListener('click',()=>{
  start=4;
  end=5;
 })
-let basketArray=[]
 
+let sum=0
     fetch('http://localhost:3000/productCart')
     .then(res => res.json())
     .then(data => {
        
-        basketArray.push(data)
+      
         data.map(item => {
             basketMenuElem.insertAdjacentHTML('beforeend', `
             <li class="basket-item">
@@ -348,14 +340,16 @@ let basketArray=[]
         <div class="basket-link-close" onClick="closeItemBasket(${item.id})">X</div>
         </li>
             `)
+            sum +=item.price;
+            basketTotalPriceElem.innerHTML=`${sum}تومان`
+            console.log(item.price);
         })
     })
 
 
 
     const closeItemBasket=(closeID)=>{
-        const basketFilter=basketArray[0].filter(basket=>basket.id !==closeID)
-        console.log(closeID);
+        
        
         fetch(`http://localhost:3000/productCart/${closeID}`,{
             method:"DELETE"
