@@ -43,6 +43,13 @@
       "price": 149000,
       "count": "1",
       "img": "./image/product-2.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "قهوه کنیا",
+      "price": 29000,
+      "count": "1",
+      "img": "./image/product-1.jpeg"
     }
   ],
   "favoriteProduct": [],
